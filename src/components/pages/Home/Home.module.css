@@ -1,0 +1,75 @@
+.mainSlider {
+  display: flex;
+  height: 600px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.mainSlider :global(.swiper) {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+}
+
+.mainSlider :global(.swiper .swiper-slide) img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .images {
+    display: none;
+  }
+  .mainSlider {
+    height: 350px;
+    max-height: 350px;
+  }
+  .mainSlider :global(.swiper .swiper-slide) img {
+    height: 350px;
+  }
+}
+
+.categoriesSlider {
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+
+.categoriesSlider :global(.swiper) {
+  padding-bottom: 1rem;
+}
+.categoriesSlider :global(.swiper .swiper-slide) {
+  align-self: stretch;
+}
+
+.categoriesSlider :global(.swiper .swiper-slide) > div {
+  height: 250px;
+  display: flex;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.categoriesSlider :global(.swiper .swiper-slide) > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categoriesSlider :global(.swiper .swiper-slide) h4 {
+  font-size: calc(0.9rem + 0.5vw) !important;
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+/* ── IMPROVEMENT: Featured section heading ── */
+.sectionHeading {
+  font-size: calc(1.1rem + 0.5vw);
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--main-color);
+  display: inline-block;
+}
